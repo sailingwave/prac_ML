@@ -8,3 +8,12 @@ The data for this project come from this source: http://groupware.les.inf.puc-ri
 training = read.csv('pml-training.csv')
 dim(training)
 ```
+
+```{r,pre-proc}
+names(training)
+tmp = subset(training,select=c('min_roll_forearm','max_roll_forearm'))
+```
+
+plot(training$stddev_roll_belt^2,training$var_roll_belt)
+hist(training$max_roll_forearm)
+tmp = subset(training,)
